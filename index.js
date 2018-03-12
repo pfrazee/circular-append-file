@@ -11,6 +11,7 @@ module.exports = function (targetPath, {maxSize} = {}) {
   var hasCircled = false
 
   const append = (data, cb) => {
+    cb = cb || noop
     let offset = position
     fs.write(fd, data, offset, cb)
     position += data.length
@@ -35,3 +36,5 @@ module.exports = function (targetPath, {maxSize} = {}) {
 
   return {append, createReadStream, close}
 }
+
+function noop () {}
