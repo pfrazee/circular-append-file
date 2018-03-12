@@ -1,6 +1,6 @@
 {
   "name": "circular-append-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple appendable-file interface which enforces a size cap by overwriting itself.",
   "main": "index.js",
   "scripts": {
